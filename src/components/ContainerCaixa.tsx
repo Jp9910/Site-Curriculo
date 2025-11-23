@@ -8,7 +8,7 @@ function ContainerCaixa({ children }: ContainerCaixaProps) {
     return (
         <div className="
             container 
-            bg-white 
+            bg-gray-200 
             text-gray-900 
             dark:bg-gray-800 
             dark:text-white 
@@ -23,6 +23,8 @@ function ContainerCaixa({ children }: ContainerCaixaProps) {
             box-border
             shadow-2xl
             rounded-2xl
+            min-h-screen
+            h-auto
         ">
             {children}
         </div>
