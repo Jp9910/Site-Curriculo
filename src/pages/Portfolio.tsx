@@ -23,8 +23,8 @@ function Portfolio() {
                     <h2 className="text-lg font-bold">10/2024 - 04/2025 - Título: Development of applications with microservices architecture</h2>
                     <p className="ml-8"><b>Type:</b> Undergraduate Thesis</p>
                     <p className="ml-8"><b>Supervisor:</b> Admilson de Ribamar Lima Ribeiro</p>
-                    <a className="ml-8 text-blue-400" href="https://github.com/Jp9910/microservices_project/blob/master/TCC-Monografia-Parte-Escrita.pdf">[Thesis]</a>
-                    <a className="ml-8 text-blue-400" href="https://github.com/Jp9910/microservices_project">[Project Repository]</a>
+                    <a className="ml-8 text-blue-400" target="_blank" href="https://github.com/Jp9910/microservices_project/blob/master/TCC-Monografia-Parte-Escrita.pdf">[Thesis]</a>
+                    <a className="ml-8 text-blue-400" target="_blank" href="https://github.com/Jp9910/microservices_project">[Project Repository]</a>
                     <p className="ml-8"><b>Description: </b>The thesis explored the microservices architecture, common practices and tools used in its development and related works, through extensive literature review. An e-commerce web platform using this architecture was developed.</p>
                     <p className="ml-8"><b>Tools Used:</b> LaTeX, Java, SpringBoot, TypeScript, Node.js, Express, C#, .NET, ReactJS, Angular, Nginx, SQL, PostgreSQL, MongoDB, Memcached, GitHub Actions, RabbitMQ, Docker, Kubernetes, Prometheus, Grafana, Loki.</p>
                 </div>

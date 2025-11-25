@@ -10,6 +10,13 @@ function NavBar() {
 
     const localUrl = useLocation()
 
+    const menusNavbar = [
+        { href: '/website', label: 'About Me' },
+        { href: '/website/portfolio', label: 'Portfolio' },
+        { href: '/website/resume', label: 'Resumé' },
+        { href: '/website/blog', label: 'Blog' },
+    ];
+
     /**
      * Recarregar componente apenas 1 vez usando useRef:
      * const precisaCarregarUsuarioRef = useRef(true)
@@ -24,7 +31,7 @@ function NavBar() {
      */
 
     return (
-        <section id="section-navbar" className="mb-10">
+        <header id="section-navbar" className="mb-10">
             <nav className="bg-white dark:bg-gray-800 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
                 <section className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <Link to="/website" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -36,43 +43,30 @@ function NavBar() {
 
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">João Secundo</span>
                     </Link>
+
                     <section className="items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                         <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700">
-                            <li>
-                                <Link to="/website/" id="navbar-link-home" 
-                                    className={`${localUrl.pathname==="/" ? "md:text-blue-700 md:dark:text-blue-500" : ""}
-                                    block py-2 px-3 rounded-sm md:p-0 
-                                    md:hover:text-blue-700
-                                    md:bg-transparent text-gray-900 dark:text-white`} 
-                                >
-                                    About me
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/website/portfolio" id="navbar-link-portfolio"
-                                    className={`${localUrl.pathname==="/portfolio" ? "md:text-blue-700 md:dark:text-blue-500" : ""}
-                                    block py-2 px-3 rounded-sm md:p-0
-                                    text-gray-900 
-                                    hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 
-                                    md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
-                                >
-                                    Portfolio
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/website/resume" id="navbar-link-resume"
-                                    className={`${localUrl.pathname==="/resume" ? "md:text-blue-700 md:dark:text-blue-500" : ""}
-                                    block py-2 px-3 rounded-sm md:p-0
-                                    text-gray-900 
-                                    hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 
-                                    md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
-                                >
-                                    Resumé
-                                </Link>
-                            </li>
-                            <li>
+                            {menusNavbar.map((link) => {
+                                const isAtivo = (localUrl.pathname === link.href);
+                                return (
+                                    <li>
+                                        <Link
+                                            key={link.href}
+                                            to={link.href}
+                                            className={`
+                                                px-3 py-2 rounded-md transition-colors
+                                                ${isAtivo ? 'bg-gray-700 text-white' : 'text-gray-300 hover:bg-gray-800'}
+                                            `}
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    </li>
+                                );
+                            })}
+
+                            {/* <li>
                                 <Link to="/website/blog" id="navbar-link-blog"
-                                    className={`${localUrl.pathname==="/blog" ? "md:text-blue-700 md:dark:text-blue-500" : ""}
+                                    className={`${localUrl.pathname==="/website/blog" ? "md:text-blue-700 md:dark:text-blue-500" : ""}
                                     block py-2 px-3 rounded-sm md:p-0
                                     text-gray-900 
                                     hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 
@@ -80,12 +74,12 @@ function NavBar() {
                                 >
                                     Blog
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </section>
                 </section>
             </nav>
-        </section>
+        </header>
     )
 }
 

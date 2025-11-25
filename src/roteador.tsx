@@ -17,7 +17,7 @@ function Roteador() {
             <ContainerCaixa>
                 <NavBar />
                 <Routes>
-                        <Route path="/website/" element={<AboutMe />}/>
+                        <Route path="/website" element={<AboutMe />}/>
                         <Route path="*" element={<NotFound />}/>
                         <Route path="/website/resume" element={<Resume />}/>
                         <Route path="/website/portfolio" element={<Portfolio />}/>

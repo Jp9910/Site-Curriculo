@@ -7,6 +7,15 @@ import infrastructureIcon from '../assets/infrastructure.png'
 import cybersecIcon from '../assets/ciberseguranca.png'
 import profilePic from '../assets/profile.jpg'
 import linkedinIcon from '../assets/linkedin.png'
+
+import frIcon from '../assets/france.png'
+import brIcon from '../assets/brazil.png'
+import spIcon from '../assets/spain.png'
+import caIcon from '../assets/canada.png'
+import mxIcon from '../assets/mexico.png'
+import ptIcon from '../assets/portugal.png'
+import usIcon from '../assets/usa.png'
+import qcIcon from '../assets/quebec.png'
 import { Link } from 'react-router'
 
 function AboutMe() {
@@ -94,6 +103,40 @@ function AboutMe() {
                 </div>
             </section>
 
+            <section id="linguas">
+                <h1 className="text-2xl mb-4 border-b border-gray-200 dark:border-gray-600">
+                    Languages
+                </h1>
+                <div className="mx-6 my-2">
+                    <div className="flex-col justify-start align-middle-">
+                        {/* <p className="text-md mx-2">🇫🇷 🇨🇦 French</p> */}
+                        <div className="flex mb-4 gap-1.5">
+                            <img src={qcIcon} className="w-8 h-8 row-span-3" alt="quebec flag icon" />
+                            <img src={frIcon} className="w-8 h-8 row-span-3" alt="france flag icon" />
+                            <p className="text-md mx-2"> Français - Intermediate </p>
+                        </div>
+
+                        <div className="flex mb-4 gap-1.5">
+                            <img src={mxIcon} className="w-8 h-8 row-span-3" alt="mexico flag icon" />
+                            <img src={spIcon} className="w-8 h-8 row-span-3" alt="spain flag icon" />
+                            <p className="text-md mx-2"> Español - Intermediate </p>
+                        </div>
+
+                        <div className="flex mb-4 gap-1.5">
+                            <img src={brIcon} className="w-8 h-8 row-span-3" alt="brazil flag icon" />
+                            <img src={ptIcon} className="w-8 h-8 row-span-3" alt="portugal flag icon" />
+                            <p className="text-md mx-2"> Português - Fluent </p>
+                        </div>
+
+                        <div className="flex mb-4 gap-1.5">
+                            <img src={caIcon} className="w-8 h-8 row-span-3" alt="canada flag icon" />
+                            <img src={usIcon} className="w-8 h-8 row-span-3" alt="usa flag icon" />
+                            <p className="text-md mx-2"> English - Fluent </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="contato">
                 <h1 className="text-2xl mb-4 border-b border-gray-200 dark:border-gray-600">Contact</h1>
                 <div className="mx-6 my-2">
@@ -103,12 +146,14 @@ function AboutMe() {
                             <p className="text-md mx-2"> +55 (13) 997558762</p>
                         </div>
 
-                        <a href="mailto:secundo.jp@gmail.com" className="flex mb-4" target="_blank" rel="noreferrer">
-                            <img src={emailIcon} className="w-8 h-8 row-span-3" alt="icone email" />
+                        <div className='flex mb-4'>
+                            <a href="mailto:secundo.jp@gmail.com" className="" target="_blank" rel="noreferrer">
+                                <img src={emailIcon} className="w-8 h-8 row-span-3" alt="icone email" />
+                            </a>
                             <p className="text-md mx-2">secundo.jp@gmail.com</p>
-                        </a>
+                        </div>
 
-                        <a href="https://www.linkedin.com/in/joao-paulo-secundo/" className="flex mb-4 text-xl">
+                        <a href="https://www.linkedin.com/in/joao-paulo-secundo/" target="_blank" className="flex mb-4 text-xl">
                             <img src={linkedinIcon} className="w-8 h-8 row-span-3" alt="icone linkedin" />
                             <p className="text-sm mx-2">linkedin.com/in/joao-paulo-secundo/</p>
                         </a>
