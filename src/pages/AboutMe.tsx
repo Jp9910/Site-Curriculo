@@ -5,6 +5,8 @@ import webIcon from '../assets/web-dev.png'
 import dataScienceIcon from '../assets/data-science.png'
 import infrastructureIcon from '../assets/infrastructure.png'
 import cybersecIcon from '../assets/ciberseguranca.png'
+import mlIcon from '../assets/ml.png'
+import hciIcon from '../assets/HCI.png'
 import profilePic from '../assets/profile.jpg'
 import linkedinIcon from '../assets/linkedin.png'
 
@@ -25,13 +27,13 @@ function AboutMe() {
                 <img src={profilePic} alt="Foto de perfil" className="rounded-full w-48 h-48 md:mr-4" />
                 <div className="flex-col w-full lg:w-2/3 space-4">
                     <p className="mb-6 lg:text-justify">
-                        Hello! I'm João Paulo, a computer scientist with experience spanning various areas of computing, such as software development, 
-                        data science, artificial intelligence, and cybersecurity. I have experience in all stages of software development, 
-                        from algorithms to deployment. I am dedicated and passionate about creating high-quality solutions that generate 
+                        Hello! I'm João Paulo, a computer scientist with experience spanning various areas of computing, such as software development,
+                        data science, artificial intelligence, and cybersecurity. I have experience in all stages of software development,
+                        from algorithms to deployment. I am dedicated and passionate about creating high-quality solutions that generate
                         significant real-world value. <br></br>
 
-                        Although most of my experience is in web development, I am motivated by roles that combine problem-solving, data, 
-                        security, and creativity.&nbsp; <Link to={"/website/portfolio"} className='text-blue-400'>My academic and personal projects</Link> encompass a wide range of modern technologies. I also 
+                        Although most of my experience is in web development, I am motivated by roles that combine problem-solving, data,
+                        security, and creativity.&nbsp; <Link to={"/website/portfolio"} className='text-blue-400'>My academic and personal projects</Link> encompass a wide range of modern technologies. I also
                         love collaborating in dynamic teams, always seeking to make a positive impact and grow professionally.
                     </p>
                 </div>
@@ -51,7 +53,7 @@ function AboutMe() {
                                 or any other specific framework, but rather a software developer with ample capacity
                                 to learn quickly and apply my knowledge to develop effective solutions.
 
-                                That said, I have experience with several frontend frameworks (React, Angular, Vue) and backend 
+                                That said, I have experience with several frontend frameworks (React, Angular, Vue) and backend
                                 frameworks (Node.js, Spring/Springboot, .Net, Laravel).
                             </p>
                         </div>
@@ -63,6 +65,16 @@ function AboutMe() {
                             <h1 className="text-lg font-bold">Infrastructure Analysis/Development</h1>
                             <p className="lg:text-justify">
                                 I have experience in analyzing, designing, and implementing efficient and scalable IT infrastructures. My thesis comprehensively explored the modern development of distributed applications using microservices architecture, covering everything from basic architectural concepts to the use of tools for development, deployment, and monitoring. The project repository and the thesis are available <a className="text-blue-500" target="_blank" href="https://github.com/Jp9910/microservices_project/blob/master/TCC-Monografia-Parte-Escrita.pdf">here</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-4 w-auto">
+                        <img src={mlIcon} className="w-10 h-10" alt="icone machine learning" />
+                        <div className="flex-col">
+                            <h1 className="text-lg font-bold">Machine Learning</h1>
+                            <p className="lg:text-justify">
+                                (In construction)
                             </p>
                         </div>
                     </div>
@@ -96,6 +108,16 @@ function AboutMe() {
                             <p className="lg:text-justify">
                                 Cybersecurity is also an area that greatly interests me, especially vulnerability analysis and data security/privacy. I'm a beginner in this field, but I've already studied cryptography, authentication/access control, malware and software security, online security, network security, and data systems security/privacy. One of my academic projects explores the TOCTOU attack and implements a proof-of-concept system that demonstrates the attack, how it happens, and how the vulnerability can be fixed.
                                 {/* Busco aplicar esse conhecimento de forma prática em pequenos projetos e laboratórios, explorando tópicos como autenticação segura, criptografia aplicada e análise de riscos em aplicações web. Minha meta é evoluir continuamente e construir uma base sólida que me permita atuar no desenvolvimento de sistemas mais seguros e na proteção de ambientes digitais. */}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-4 w-auto">
+                        <img src={hciIcon} className="w-10 h-10" alt="icon human-computer interaction" />
+                        <div className="flex-col">
+                            <h1 className="text-lg font-bold">Human-Computer Interaction</h1>
+                            <p className="lg:text-justify">
+                                (In construction)
                             </p>
                         </div>
                     </div>
